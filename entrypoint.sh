@@ -12,6 +12,7 @@ if [ ! -d /data ]; then
 fi
 
 if [ ! -d /media-base ]; then
+	mkdir /media-base
 	ln -s /jirafeau/media /media-base
 fi
 
