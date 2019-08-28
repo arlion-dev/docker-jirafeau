@@ -12,7 +12,7 @@ if [ ! -d /data ]; then
 fi
 
 if [ ! -d /media ]; then
-	mkdir /media && ln -s /media /jirafeau/media
+	ln -s /jirafeau/media /media
 fi
 
 if [ ! -f /cfg/config.local.php ]; then
