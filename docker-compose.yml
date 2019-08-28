@@ -19,6 +19,7 @@ services:
     volumes:
       - ./data:/data
       - ./cfg:/cfg
+      - ./media:/media
     #environment:
     #  - UID="4000"
     #  - GID="4000"
