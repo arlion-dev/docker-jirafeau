@@ -11,6 +11,10 @@ if [ ! -d /data ]; then
 	mkdir /data
 fi
 
+if [ ! -d /media ]; then
+	mkdir /media && ln -s /media /jirafeau/media
+fi
+
 if [ ! -f /cfg/config.local.php ]; then
 	touch /cfg/config.local.php
 fi
@@ -20,5 +24,5 @@ if [ ! -L /jirafeau/lib/config.local.php ]; then
 	ln -s /cfg/config.local.php /jirafeau/lib/config.local.php
 fi
 
-chown -R jirafeau:jirafeau /jirafeau /var/run/php-fpm.sock /var/lib/nginx /tmp /data /cfg /var/tmp/nginx
+chown -R jirafeau:jirafeau /jirafeau /var/run/php-fpm.sock /var/lib/nginx /tmp /data /cfg /media /var/tmp/nginx
 supervisord -c /usr/local/etc/supervisord.conf
