@@ -34,7 +34,7 @@ COPY entrypoint.sh /
 
 RUN chmod +x /entrypoint.sh
 
-VOLUME [ "/data", "/cfg" ]
+VOLUME [ "/data", "/cfg", "/media" ]
 
 EXPOSE 80
 LABEL description "Jirafeau is a web site permitting to upload a file in a simple way and give an unique link to it."
